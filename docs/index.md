@@ -20,3 +20,5 @@ Check out [Animal Facts](animals.md).
 The highest grossing movies are listed in [Movie Info](movies.md).
 
 More code snippets can be found in [Code Snippets](coding.md).
+
+Some emojis: 😄🚀📚 and [more](emojis.md).
