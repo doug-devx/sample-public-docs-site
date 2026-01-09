@@ -1,13 +1,17 @@
 # Home
 
-This is the index page.
+Welcome to the documentation site.
 
 ```python
-print("this is some code")
+print("this is a code block")
 ```
 
-## Sections
+## Python code block from an include
 
-* [Getting Started](getting-started.md)
-* [Configuration](configuration.md)
-* [FAQ](faq.md)
+{% include python-snippet.md %}
+
+Check out [Animal Facts](animals.md).
+
+The highest grossing movies are listed in [Movie Info](movies.md).
+
+More code snippets can be found in [Code Snippets](coding.md).
