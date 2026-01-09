@@ -1,7 +1,5 @@
 ---
 title: Site Map
-layout: default
-nav_order: -1
 ---
 
 # Site Map

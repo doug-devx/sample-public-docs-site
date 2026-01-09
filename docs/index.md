@@ -1,3 +1,8 @@
+---
+title: Sample Docs Home
+nav_order: 1
+---
+
 # Home
 
 Welcome to the documentation site.

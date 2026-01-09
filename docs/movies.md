@@ -1,6 +1,6 @@
 ---
 title: Movie Info
-nav_order: 2
+nav_order: 3
 ---
 
 ## Top Movies by Year (2014-2024)
