@@ -4,7 +4,4 @@
 
 {% include python-snippet.md %}
 
-{% capture footer %}
 {% include footer.md %}
-{% endcapture %}
-{{ footer | markdownify }}
