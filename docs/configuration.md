@@ -5,7 +5,8 @@ has_toc: true
 
 # Configuration Guide
 
-{% toc %}
+* TOC
+{:toc}
 
 This document provides an overview of the configuration options available for the project.
 
