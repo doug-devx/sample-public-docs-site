@@ -4,7 +4,7 @@ plugins:
 
 title: Sample Docs Site
 description: A sample documentation site using Just the Docs theme.
-color_scheme: auto
+color_scheme: dark
 nav_external_links:
   - title: Issues 🚀
     url: https://github.com/doug-devx/sample-public-docs-site/issues
