@@ -1,1 +1,6 @@
 Footer include
+
+* [Home](/)
+* [Getting Started](getting-started.md)
+* [Configuration](configuration.md)
+* [FAQ](faq.md)
