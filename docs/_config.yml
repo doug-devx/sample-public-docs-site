@@ -1,6 +1,7 @@
 remote_theme: just-the-docs/just-the-docs@v0.11.1
 plugins:
 - jekyll-remote-theme
+- jemoji
 
 title: Sample Docs Site
 description: A sample documentation site using Just the Docs theme.
@@ -9,4 +10,5 @@ nav_external_links:
     url: https://github.com/doug-devx/sample-public-docs-site/issues
     hide_icon: false
     opens_in_new_tab: true
+
 color_scheme: wider
