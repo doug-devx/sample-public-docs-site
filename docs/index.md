@@ -23,4 +23,8 @@ More code snippets can be found in [Code Snippets](coding.md).
 
 Some emojis: 😄🚀📚 and [more](emojis.md).
 
-Emojis from GitHub emoji code: :herb: :beetle: :lady_beetle: :octocat:
+Emojis from GitHub emoji code: :herb: :beetle: :lady_beetle:
+
+* Requires the `jemoji` plugin
+* Supports standard emojis, but does not support all of GitHub's emojis such as `:octocat:` that are not standard.
+* Emojis may appear different from GitHub's
