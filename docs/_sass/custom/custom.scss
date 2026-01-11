@@ -1,4 +1,5 @@
-/* modify/override style classes here */
+/* Modify/override style classes here */
+/* This is particular to the Just the Docs theme */
 /* h1 { color: #FF0000; } */
 
 /* table styling */
@@ -11,8 +12,18 @@
 .table-wrapper table tbody tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+.table-wrapper table td {
+    background-color: transparent;
+}
 
 /* triple tick code blocks */
 div.highlight, pre.highlight {
   background-color: #f5f6fa;
+}
+
+/* inline single-tick code blocks */
+:not(pre,figure) > code {
+    padding: 0.4em 0.4em;
+    background-color: #f5f6fa;
+    border: 1px solid #999999;
 }
