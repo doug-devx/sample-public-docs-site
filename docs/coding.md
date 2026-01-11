@@ -4,6 +4,7 @@ nav_order: 2
 ---
 
 # Code Snippets
+{: .no_toc }
 
 * TOC
 {:toc}
