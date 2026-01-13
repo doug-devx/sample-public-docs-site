@@ -15,4 +15,5 @@ color_scheme: wider
 
 markdown: kramdown
 kramdown:
-  syntax_highlighter: none
+  syntax_highlighter_opts:
+    disable: true
