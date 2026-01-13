@@ -13,4 +13,6 @@ nav_external_links:
 
 color_scheme: wider
 
-highlighter: none
+markdown: kramdown
+kramdown:
+  syntax_highlighter: none
