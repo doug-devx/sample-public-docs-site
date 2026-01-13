@@ -4,4 +4,26 @@
 <!-- and it's easy to individually load additional languages -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/dart.min.js"></script>
 
-<script>hljs.highlightAll();</script>
+<!--<script>hljs.highlightAll();</script>-->
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+  // 1. Find all Jekyll code wrappers
+  document.querySelectorAll('div[class*="language-"]').forEach((block) => {
+    // 2. Find the <code> element inside
+    const codeElement = block.querySelector('code');
+    if (codeElement) {
+      // 3. Extract the language (e.g., "dart" from "language-dart")
+      const langMatch = block.className.match(/language-([^\s]+)/);
+      if (langMatch) {
+        const lang = langMatch[1];
+        // 4. Add the class Highlight.js expects
+        codeElement.classList.add(`language-${lang}`);
+      }
+    }
+  });
+
+  // 5. Now that classes are in the right place, run the highlighter
+  hljs.highlightAll();
+});
+</script>
