@@ -27,3 +27,8 @@ div.highlight, pre.highlight {
     background-color: #f5f6fa;
     border: 1px solid #999999;
 }
+
+/* use transparent background for highlightjs */
+.hljs {
+  background: transparent !important;
+}
