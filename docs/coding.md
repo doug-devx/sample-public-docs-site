@@ -19,7 +19,7 @@ Console.WriteLine("Hello, World!");
 string GetGreeting(string name) => $"Hello, {name}!";
 
 // Calling the function
-var message = GetGreeting("World");
+var message = GetGreeting("C#");
 Console.WriteLine(message);
 ```
 
@@ -42,37 +42,61 @@ string getGreeting(String name, [String emoji = '🚀']) {
 
 ```go
 package main
+
 import "fmt"
+
 func main() {
-    fmt.Println("Hello, World!")
+	// Call the function and assign to a variable
+	greeting := getMessage("Go")
+	fmt.Println(greeting)
+}
+
+// getMessage returns a formatted string
+func getMessage(name string) string {
+	return fmt.Sprintf("Hello, %s! ʕ•ᴥ•ʔ", name)
 }
 ```
 
 ## JavaScript
 
 ```javascript
-function greet(name) {
-    return `Hello, ${name}!`;
-}
-console.log(greet("World"));
+// Function definition using an arrow function
+const getGreeting = (name) => {
+    return `Hello, ${name}! 🚀`; // Template literal with interpolation
+};
+
+// Calling the function
+const message = getGreeting("JavaScript");
+
+// Output to console
+console.log(message);
 ```
 
 ## Kotlin
 
 ```kotlin
-fun greet(name: String): String {
-    return "Hello, $name!"
+fun main() {
+    // Calling the function and storing the result
+    val greeting = getGreeting("Kotlin")
+    println(greeting)
 }
-println(greet("World"))
+
+// Single-expression function with string template
+fun getGreeting(name: String): String = "Hello, $name! ✨"
 ```
 
 ## Lua
 
 ```lua
-function greet(name)
-    return "Hello, " .. name .. "!"
+-- Function definition
+local function getGreeting(name)
+    local message = "Hello, " .. name .. "! 🌙"
+    return message
 end
-print(greet("World"))
+
+-- Calling the function
+local result = getGreeting("Lua")
+print(result)
 ```
 
 ## Python
@@ -82,37 +106,61 @@ print(greet("World"))
 ## Ruby
 
 ```ruby
-def greet(name)
-    "Hello, #{name}!"
+# Method definition
+def get_greeting(name)
+  "Hello, #{name}! 💎" # Implicit return
 end
-puts greet("World")
+
+# Calling the method and assigning to a variable
+message = get_greeting("Ruby")
+
+# Outputting to the console
+puts message
 ```
 
 ## Rust
 
 ```rust
-fn greet(name: &str) -> String {
-    format!("Hello, {}!", name)
-}
 fn main() {
-    println!("{}", greet("World"));
+    // Calling the function
+    let message = get_greeting("Rust");
+    println!("{}", message);
+}
+
+// Function with explicit return type
+fn get_greeting(name: &str) -> String {
+    format!("Hello, {}! 🦀", name)
 }
 ```
 
 ## Swift
 
 ```swift
-func greet(name: String) -> String {
-    return "Hello, \(name)!"
+// Function with an argument label 'to' and parameter name 'name'
+func getGreeting(to name: String) -> String {
+    return "Hello, \(name)! 🍎"
 }
-print(greet(name: "World"))
+
+// Calling the function using the label
+let message = getGreeting(to: "Swift")
+print(message)
 ```
 
 ## TypeScript
 
 ```typescript
-function greet(name: string): string {
-    return `Hello, ${name}!`;
+// Interface to define the shape of an object
+interface User {
+  name: string;
+  id: number;
 }
-console.log(greet("World"));
+
+// Function with type annotations for parameters and return value
+const welcomeUser = (user: User): string => {
+  return `Welcome, ${user.name}! (ID: ${user.id}) 🟦`;
+};
+
+// Creating a typed object and calling the function
+const newUser: User = { name: "TypeScript", id: 1 };
+console.log(welcomeUser(newUser));
 ```
