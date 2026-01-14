@@ -28,3 +28,9 @@ Emojis from GitHub emoji code: :herb: :beetle: :lady_beetle:
 * Requires the `jemoji` plugin
 * Supports standard emojis, but does not support all of GitHub's emojis such as `:octocat:` that are not standard.
 * Emojis may appear different from GitHub's
+
+```food
+ing x = "sugar"
+ing y = "butter"
+mix(x, y)
+```
