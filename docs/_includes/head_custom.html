@@ -6,4 +6,14 @@
 <!-- a custom language highlight file -->
 <script src="{{ '/assets/js/food.js' | relative_url }}"></script>
 
-<script>hljs.highlightAll();</script>
+<!-- highlightjs-copy https://github.com/arronhunt/highlightjs-copy -->
+<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"
+/>
+
+<script>
+hljs.addPlugin(new CopyButtonPlugin());
+hljs.highlightAll();
+</script>
