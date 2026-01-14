@@ -9,7 +9,9 @@ nav_order: 2
 * TOC
 {:toc}
 
-## C\#
+## Languages
+
+### C\#
 
 ```csharp
 // The simplest C# Hello World
@@ -23,7 +25,7 @@ var message = GetGreeting("C#");
 Console.WriteLine(message);
 ```
 
-## Dart
+### Dart
 
 ```dart
 void main() {
@@ -38,7 +40,7 @@ string getGreeting(String name, [String emoji = '🚀']) {
 }
 ```
 
-## Go
+### Go
 
 ```go
 package main
@@ -57,7 +59,7 @@ func getMessage(name string) string {
 }
 ```
 
-## JavaScript
+### JavaScript
 
 ```javascript
 // Function definition using an arrow function
@@ -72,7 +74,7 @@ const message = getGreeting("JavaScript");
 console.log(message);
 ```
 
-## Kotlin
+### Kotlin
 
 ```kotlin
 fun main() {
@@ -85,7 +87,7 @@ fun main() {
 fun getGreeting(name: String): String = "Hello, $name! ✨"
 ```
 
-## Lua
+### Lua
 
 ```lua
 -- Function definition
@@ -99,11 +101,11 @@ local result = getGreeting("Lua")
 print(result)
 ```
 
-## Python
+### Python
 
 {% include python-snippet.md %}
 
-## Ruby
+### Ruby
 
 ```ruby
 # Method definition
@@ -118,7 +120,7 @@ message = get_greeting("Ruby")
 puts message
 ```
 
-## Rust
+### Rust
 
 ```rust
 fn main() {
@@ -133,7 +135,7 @@ fn get_greeting(name: &str) -> String {
 }
 ```
 
-## Swift
+### Swift
 
 ```swift
 // Function with an argument label 'to' and parameter name 'name'
@@ -146,7 +148,7 @@ let message = getGreeting(to: "Swift")
 print(message)
 ```
 
-## TypeScript
+### TypeScript
 
 ```typescript
 // Interface to define the shape of an object
@@ -163,4 +165,67 @@ const welcomeUser = (user: User): string => {
 // Creating a typed object and calling the function
 const newUser: User = { name: "TypeScript", id: 1 };
 console.log(welcomeUser(newUser));
+```
+
+## Markup, Config and Others
+
+### SQL
+
+```sql
+SELECT id, username 
+FROM users 
+WHERE status = 'active' 
+ORDER BY created_at DESC;
+```
+
+### YAML
+
+```yaml
+server:
+  port: 8080
+  features:
+    - logging
+    - authentication
+  enabled: true
+```
+
+### HTML
+
+```html
+<div class="container">
+  <h1 style="color: #ff5733;">Hello World</h1>
+</div>
+```
+
+### CSS
+
+```css
+/* Styling for the main container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f4f8; /* Hex code */
+  padding: 20px 10%;         /* Multiple unit types */
+}
+
+#main-title {
+  font-family: 'Helvetica', sans-serif;
+  color: rgba(0, 123, 255, 0.8); /* Functional color notation */
+  font-size: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+```
+
+### Markdown
+
+```markdown
+# Project Title
+## Subheader
+This is a [link](https://google.com) and **bold text**.
 ```
