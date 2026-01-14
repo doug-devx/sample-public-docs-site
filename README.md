@@ -34,7 +34,6 @@ Specifically you may want to add styles for the `code.hljs` element class code b
 
 #### Copy button
 
-I possible solution for adding a copy button is:
+A copy button can be added to code blocks using https://github.com/arronhunt/highlightjs-copy
 
-https://github.com/arronhunt/highlightjs-copy
-
+JS and CSS CDN links added to `_includes/head_custom.html` and code registers the `highlightjs-copy` plugin.
