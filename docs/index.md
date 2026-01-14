@@ -30,6 +30,8 @@ Emojis from GitHub emoji code: :herb: :beetle: :lady_beetle:
 * Emojis may appear different from GitHub's
 
 ```food
+# fictional food language syntax
+# custom language syntax highlighting example
 ing x = "sugar"
 ing y = "butter"
 mix(x, y)
