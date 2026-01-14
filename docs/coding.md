@@ -27,7 +27,14 @@ Console.WriteLine(message);
 
 ```dart
 void main() {
-  print('Hello, World!');
+  // Calling the function
+  final message = getGreeting("Dart");
+  print(message);
+}
+
+// Defining a function with an optional parameter
+string getGreeting(String name, [String emoji = '🚀']) {
+  return 'Hello, $name $emoji'; // Testing interpolation and symbols
 }
 ```
 
