@@ -229,3 +229,22 @@ server:
 ## Subheader
 This is a [link](https://google.com) and **bold text**.
 ```
+
+## Made up languages
+
+```zynth
+~> Define a starting point
+@Alpha core_unit :=: "System Start"
+
+^branch check_status(input) {
+    commit? input !! |~| {
+        fetch! data >>-- "remote_node"
+        ~loop 5 times {
+            print(data)
+        }
+    }
+}
+
+~> Execute the branch
+check_status(core_unit)
+```
