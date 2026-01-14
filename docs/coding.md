@@ -12,14 +12,15 @@ nav_order: 2
 ## C\#
 
 ```csharp
-using System;
-class Program
-{
-    static void Main()
-    {
-        Console.WriteLine("Hello, World!");
-    }
-}
+// The simplest C# Hello World
+Console.WriteLine("Hello, World!");
+
+// Defining a function
+string GetGreeting(string name) => $"Hello, {name}!";
+
+// Calling the function
+var message = GetGreeting("World");
+Console.WriteLine(message);
 ```
 
 ## Dart
