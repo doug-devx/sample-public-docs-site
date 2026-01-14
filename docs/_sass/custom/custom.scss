@@ -16,6 +16,7 @@
     background-color: transparent;
 }
 
+/* Default Jekyll code block styling */
 /* triple tick code blocks */
 div.highlight, pre.highlight {
   background-color: #f5f6fa;
@@ -28,6 +29,7 @@ div.highlight, pre.highlight {
     border: 1px solid #999999;
 }
 
+/* highlightjs specific styling */
 /* use transparent background for highlightjs */
 .hljs {
   background: transparent !important;

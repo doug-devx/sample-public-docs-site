@@ -16,4 +16,5 @@ color_scheme: wider
 markdown: kramdown
 kramdown:
   syntax_highlighter_opts:
+    # disables syntax highlighting so another highlighter like highlightjs can be used
     disable: true
