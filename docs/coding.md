@@ -232,6 +232,8 @@ This is a [link](https://google.com) and **bold text**.
 
 ## Made up languages
 
+### Zynth
+
 ```zynth
 ~> Define a starting point
 @Alpha core_unit :=: "System Start"
