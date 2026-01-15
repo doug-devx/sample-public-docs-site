@@ -13,9 +13,16 @@ hljs.registerLanguage('zynth', function(hljs) {
         className: 'type',
         begin: '@[A-Za-z]+'
       },
+      // Define variables before operators to ensure they are captured
+      {
+        className: 'variable',
+        begin: /[a-z_][a-z0-9_]*/ // Traditional variable naming
+      },
       {
         className: 'operator',
-        begin: ':=:|>>--|!!||~|'
+        // Use a regex that ONLY looks for the specific Zynth symbols
+        // and uses \b (boundaries) where necessary
+        begin: /:=:|>>--|!!|\|~\|/ 
       }
     ]
   };
