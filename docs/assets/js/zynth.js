@@ -1,7 +1,10 @@
 hljs.registerLanguage('zynth', function(hljs) {
   return {
     name: 'Zynth',
-    keywords: 'fetch! commit? ~loop ^branch',
+    keywords: {
+      keyword: 'fetch! commit? ~loop ^branch',
+      literal: 'true false'
+    },
     contains: [
       hljs.QUOTE_STRING_MODE,
       hljs.C_NUMBER_MODE,
@@ -9,19 +12,40 @@ hljs.registerLanguage('zynth', function(hljs) {
         className: 'comment',
         begin: '~>', end: '$'
       },
+      // 1. Function DEFINITION (Name after ^branch)
+      {
+        className: 'function',
+        beginKeywords: '^branch', end: /\{/,
+        excludeEnd: true,
+        contains: [
+          {
+            className: 'title.function',
+            begin: /[a-z_][a-z0-9_]*/
+          },
+          {
+            className: 'params',
+            begin: /\(/, end: /\)/,
+            keywords: 'input data', // Highlight specific param names
+            contains: [hljs.SELF]
+          }
+        ]
+      },
+      // 2. Function CALLS (Name followed by '(')
+      {
+        className: 'title.function.invoke',
+        begin: /[a-z_][a-z0-9_]*(?=\()/, // Positive lookahead for '('
+        relevance: 0
+      },
       {
         className: 'type',
         begin: '@[A-Za-z]+'
       },
-      // Define variables before operators to ensure they are captured
       {
         className: 'variable',
-        begin: /[a-z_][a-z0-9_]*/ // Traditional variable naming
+        begin: /[a-z_][a-z0-9_]*/
       },
       {
         className: 'operator',
-        // Use a regex that ONLY looks for the specific Zynth symbols
-        // and uses \b (boundaries) where necessary
         begin: /:=:|>>--|!!|\|~\|/ 
       }
     ]
