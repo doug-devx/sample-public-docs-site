@@ -1,29 +1,39 @@
 hljs.registerLanguage('zynth', function(hljs) {
   return {
     name: 'Zynth',
-    // This regex tells HLJS that keywords can start with ^, ~, or end with ! and ?
-    lexemes: /[a-z_][a-z0-9_!~?^]*/, 
+    // Define what counts as a "word" for our keywords
+    lexemes: /[a-zA-Z_!~?^][a-zA-Z0-9_!~?^]*/, 
     keywords: {
       keyword: 'fetch! commit? ~loop ^branch',
       literal: 'true false'
     },
     contains: [
-      hljs.QUOTE_STRING_MODE,
-      hljs.C_NUMBER_MODE,
+      // Manually defined String mode to avoid 'variants' error
+      {
+        className: 'string',
+        begin: '"', end: '"',
+        contains: [{ begin: '\\\\.' }]
+      },
+      // Manually defined Number mode
+      {
+        className: 'number',
+        begin: /\b\d+(\.\d+)?/,
+        relevance: 0
+      },
       {
         className: 'comment',
         begin: '~>', end: '$'
       },
-      // 1. Fixed Function DEFINITION
+      // Function DEFINITION
       {
         className: 'function',
-        begin: /\^branch\s+/, // Match the keyword directly as a 'begin'
+        begin: /\^branch\s+/, 
         end: /\{/,
         excludeEnd: true,
         contains: [
           {
             className: 'title.function',
-            begin: /[a-z_][a-z0-9_]*/
+            begin: /[a-zA-Z_][a-zA-Z0-9_]*/
           },
           {
             className: 'params',
@@ -31,16 +41,16 @@ hljs.registerLanguage('zynth', function(hljs) {
             contains: [
               {
                 className: 'variable',
-                begin: /[a-z_][a-z0-9_]*/
+                begin: /[a-zA-Z_][a-zA-Z0-9_]*/
               }
             ]
           }
         ]
       },
-      // 2. Function CALLS
+      // Function CALLS
       {
         className: 'title.function.invoke',
-        begin: /[a-z_][a-z0-9_]*(?=\()/,
+        begin: /[a-zA-Z_][a-zA-Z0-9_]*(?=\()/,
         relevance: 0
       },
       {
@@ -48,13 +58,14 @@ hljs.registerLanguage('zynth', function(hljs) {
         begin: '@[A-Za-z]+'
       },
       {
-        className: 'variable',
-        begin: /[a-z_][a-z0-9_]*/
-      },
-      {
         className: 'operator',
-        // Escaped the | characters for the regex
         begin: /:=:|>>--|!!|\|~\|/ 
+      },
+      // General Variables (Catch-all for words that aren't keywords)
+      {
+        className: 'variable',
+        begin: /[a-zA-Z_][a-zA-Z0-9_]*/,
+        relevance: 0
       }
     ]
   };
